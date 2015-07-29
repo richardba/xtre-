@@ -1,0 +1,32 @@
+ .rating {
+    cursor: pointer;
+    direction: rtl;
+    font-size: 30px;
+    unicode-bidi: bidi-override;
+}
+.rating span.star::before {
+    color: #777777;
+    content: "";
+    padding-right: 5px;
+}
+.rating span.star {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+}
+.rating span.star:hover::before, .rating span.star:hover ~ span.star::before {
+    color: #ffdf7e;
+    content: "";
+    text-shadow: 0 0 1px rgba(64, 48, 48, 0.64);
+}
+span.star_active:before{
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    color: #ffdf7e!important;
+    content: ""!important;
+    padding-right: 5px;
+    text-shadow: 0 0 2px rgba(64, 48, 48, 0.64);
+}
